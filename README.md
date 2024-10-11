@@ -25,23 +25,11 @@ For object tracking, I implemented the Norfair tracking library, which uses a si
 
 Throughout the development process, I encountered several challenges:
 
-1. **Video Input Flexibility**: Initially, the code was set up to only handle YouTube video downloads. To make it more versatile, I modified the script to accept both YouTube links and local video uploads. This required implementing conditional logic and utilizing Google Colab's file upload functionality.
-
-   Solution: I created separate functions for YouTube download and local file upload, allowing users to choose their preferred input method.
-
-2. **Performance Optimization**: Processing every frame of high-resolution videos was computationally expensive and time-consuming.
-
-   Solution: While not implemented in the current version, a potential optimization would be to process every nth frame, trading some smoothness for increased speed.
-
-3. **Memory Management**: Working with large video files in Colab's limited RAM environment posed challenges.
-
-   Solution: I implemented cleanup procedures to delete downloaded or uploaded videos after processing, freeing up memory for the next task.
-
-4. **Codec Compatibility**: Some video codecs were not compatible with OpenCV's VideoWriter.
+1. **Codec Compatibility**: Some video codecs were not compatible with OpenCV's VideoWriter.
 
    Solution: I standardized the output to MP4 format using the 'mp4v' codec, which has broad compatibility.
 
-5. **Inconsistent Bounding Boxes**: Initially, the system was assigning IDs to detected persons without drawing bounding boxes around them, which made it difficult to visually associate IDs with specific individuals.
+1. **Inconsistent Bounding Boxes**: Initially, the system was assigning IDs to detected persons without drawing bounding boxes around them, which made it difficult to visually associate IDs with specific individuals.
 
    Solution: I modified the detection and visualization code to ensure that a bounding box is drawn for each detected person before assigning and displaying the ID. This significantly improved the visual clarity of the output.
 
