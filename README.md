@@ -29,13 +29,13 @@ Throughout the development process, I encountered several challenges:
 
    Solution: I standardized the output to MP4 format using the 'mp4v' codec, which has broad compatibility.
 
-1. **Inconsistent Bounding Boxes**: Initially, the system was assigning IDs to detected persons without drawing bounding boxes around them, which made it difficult to visually associate IDs with specific individuals.
+2. **Inconsistent Bounding Boxes**: Initially, the system was assigning IDs to detected persons without drawing bounding boxes around them, which made it difficult to visually associate IDs with specific individuals.
 
    Solution: I modified the detection and visualization code to ensure that a bounding box is drawn for each detected person before assigning and displaying the ID. This significantly improved the visual clarity of the output.
 
 ## Instructions for Use
 
-The code for this project is available on GitHub [insert your GitHub link here]. To use this code:
+The code for this project is available on GitHub [https://github.com/akhileshshinde/Person_detection_and_tracking/blob/main/Person_detection_and_tracking.py]. To use this code:
 
 1. Open the notebook in Google Colab.
 2. Change the runtime type to T4 GPU or any available GPU option. This can be done by going to Runtime > Change runtime type > Hardware accelerator > GPU.
@@ -56,5 +56,6 @@ While the current implementation is functional, there are several areas for pote
 3. Add options for adjusting detection confidence thresholds and tracking parameters.
 4. Implement a user-friendly interface for easier parameter tuning and video selection.
 5. Optimize the code to handle longer videos more efficiently, possibly by implementing frame skipping or more advanced memory management techniques.
+6. We can also track person giving them a unique ID, if they temporarily leave the frame they can again tracked using that ID.
 
 By continually refining and expanding this system, we can create an even more robust and versatile tool for person detection and tracking tasks.
